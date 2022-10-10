@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Samsung Galaxy S10",
+    "price": "$500",
+    "thumbnail": "https://i.blogs.es/addc23/samsung-galaxy-s10/1366_2000.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Huawei P40",
+    "price": "820",
+    "thumbnail": "https://www.tupi.com.py/imagen_png/600__600__776dbc-P40Pro-Blue.png"
+  },
+  {
+    "id": 3,
+    "title": "Iphone 14",
+    "price": "800",
+    "thumbnail": "https://m.media-amazon.com/images/I/31VjlrbE3bL._SL500_.jpg"
+  }
+]
