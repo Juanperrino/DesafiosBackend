@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Mother ASUS M5",
+    "price": "350",
+    "description": "Sockect AM3+ \r\nDDR4\r\nSATA",
+    "id": "1665434437420"
+  },
+  {
+    "title": "Monitor LG 24'",
+    "price": "250",
+    "description": "Slim\r\nFull HD",
+    "id": "1665434490744"
+  }
+]

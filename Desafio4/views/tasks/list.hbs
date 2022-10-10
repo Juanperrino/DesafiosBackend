@@ -1,0 +1,12 @@
+<div>
+  {{#if tasks.length}}
+    {{#each tasks}}
+      <div class="">
+          {{> cards }}
+      </div>
+    {{/each}}
+  {{else}}
+    <h2 style="text-align: center;">No hay tareas disponibles</h2>
+  {{/if}}
+
+</div>
