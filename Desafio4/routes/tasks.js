@@ -19,7 +19,7 @@ router.get("/edit/:id", async (req, res) => { //Otro metodo get que va a ser /ed
 
         const formInfo = {
             botonName: "Actualizar",
-            metodo: "POST",
+            metodo: "PUT",
             url: "/api/productos/edit/" + id
         }
 
@@ -65,7 +65,7 @@ router.post("/create", async (req, res) => { // Tenemos un router post para crea
     }
 });
 
-router.post("/edit/:id", async (req, res) => {
+router.put("/edit/:id", async (req, res) => {
     try {
         const { id } = req.params; //obtengo el id
         const { title, description } = req.body; // obtengo los datos
