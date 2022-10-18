@@ -6,9 +6,9 @@
     "id": "1665434437420"
   },
   {
-    "title": "Monitor LG 24'",
+    "title": "Monitor 24'",
     "price": "250",
-    "description": "Slim\r\nFull HD",
-    "id": "1665434490744"
+    "description": "Full HD\r\nSlim",
+    "id": "1665446935716"
   }
 ]
