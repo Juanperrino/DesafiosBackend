@@ -1,0 +1,96 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-image: url(https://wallpapercave.com/wp/wp2625443.jpg);
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.chat_form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  gap:2rem;
+}
+
+.chat_input{
+  margin: 1rem;
+  width: 600px;
+  height: 2rem;
+}
+
+.btn{
+  max-width: 200px;
+  margin: 0 auto;
+  padding: 0.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background: #00FAA4;
+  color: white;
+}
+
+#chat{
+  display: flex;
+  flex-direction: column;
+}
+
+#chat_dashboard{
+  width: 600px;
+  height: 400px;
+  background: #ffffff;
+  border: 1px solid #fff;
+  border-radius: 50px solid #fff;
+  overflow-y: scroll;
+}
+
+
+.chat-message{
+  padding: 1rem;
+  background-color: #00FAA4;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  width: 150px;
+}
+
+.chat-message-text{
+  color: aliceblue;
+}
+
+.product-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.products_form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.input_products{
+  margin: 5px;
+}
+
+.product{
+  background: #fff;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.product img{
+  width: 100px;
+  height: 100px;
+}
