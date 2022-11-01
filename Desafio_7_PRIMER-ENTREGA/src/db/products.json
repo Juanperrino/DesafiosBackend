@@ -1,0 +1,33 @@
+[
+   {
+      "title": "HP",
+      "description": "compu",
+      "code": "M323",
+      "thumbnail": "url",
+      "price": 550,
+      "stock": 10,
+      "timestamp": "10/31/2022 6:20:16 PM",
+      "id": 1
+   },
+   {
+      "title": "BE",
+      "description": "compu",
+      "code": "MCC323",
+      "thumbnail": "url",
+      "price": 850,
+      "stock": 15,
+      "timestamp": "10/31/2022 6:25:10 PM",
+      "id": 2
+   },
+   {
+      "title": "LG",
+      "description": "compu",
+      "code": "MCC323",
+      "thumbnail": "url",
+      "price": 750,
+      "stock": 10,
+      "timestamp": "10/31/2022 6:26:24 PM",
+      "id": 3
+   }
+
+]

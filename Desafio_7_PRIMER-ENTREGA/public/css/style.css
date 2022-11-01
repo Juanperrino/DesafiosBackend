@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+h1,h2{
+    text-align: center;
+}
+
+.btnDiv{
+   display: flex;
+   justify-content: center;
+   padding: 2rem;
+   margin-top: 2rem;
+   background-color: rgb(177, 104, 245);
+}
+
+.btnDiv button{
+    padding: 1rem;
+    cursor: pointer;
+    background: black;
+    color: white;
+    font-weight: 600;
+    transition: all .4s;
+}
+
+.btnDiv button:hover{
+    background: transparent;
+    color: black;
+    font-weight: 600;
+}

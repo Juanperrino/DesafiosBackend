@@ -1,0 +1,36 @@
+1- Crear package.jason (npm init -y)
+
+2- Configurar el package con "type": "module", (para manejarnos con import/export)
+
+3- Configurar package scripts con start, dev (todo con nodemon)
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+
+4- Instalar Dependencias por eje express
+
+5- Crear estrucutra de carpetas por ejemplo comenzar con src y su index.js
+
+6- Crear carpeta containers (con el CRUD)
+
+7- Crear carpeta routers e importar express
+    import express from "express";
+
+8- Crear instancia de app:
+const app = express();
+
+9-Crear variable con el puerto:
+const PORT = 8080;
+
+10- Los midlewares obligatorios para poder decodificar el JSON
+app.use(express.json());
+app.use(express.urlencoded({ extend: true }));
+
+11- Rutas de app con el metodo use:
+
+//Ruta Base
+app.use('/api/products', ProductRouter);
+
+
+12- Metodo listen para que el servidor quede escuchando:
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+

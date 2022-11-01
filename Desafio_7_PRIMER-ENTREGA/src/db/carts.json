@@ -1,0 +1,39 @@
+[
+   {
+      "timestamp": "11/1/2022 2:26:27 PM",
+      "products": [
+         {
+            "title": "LG",
+            "description": "compu",
+            "code": "MCC323",
+            "thumbnail": "url",
+            "price": 750,
+            "stock": 10,
+            "timestamp": "10/31/2022 6:26:24 PM",
+            "id": 3
+         }
+      ],
+      "id": 1
+   },
+   {
+      "timestamp": "11/1/2022 2:51:35 PM",
+      "products": [
+         {
+            "title": "LG",
+            "description": "compu",
+            "code": "MCC323",
+            "thumbnail": "url",
+            "price": 750,
+            "stock": 10,
+            "timestamp": "10/31/2022 6:26:24 PM",
+            "id": 3
+         }
+      ],
+      "id": 2
+   },
+   {
+      "timestamp": "11/1/2022 2:54:33 PM",
+      "products": [],
+      "id": 3
+   }
+]
