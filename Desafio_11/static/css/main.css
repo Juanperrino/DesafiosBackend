@@ -1,0 +1,18 @@
+.output-message{
+    background-color: #f0f0f0;
+    margin-bottom: 1rem;
+    height: 20em;
+    overflow-y: auto;
+}
+
+.text-brown{
+    color: brown;
+}
+
+.text-green{
+    color: green;
+}
+
+.no-dots{
+    list-style-type: none;
+}
