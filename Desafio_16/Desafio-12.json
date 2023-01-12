@@ -1,0 +1,49 @@
+{
+	"info": {
+		"_postman_id": "bdb940b5-509f-4ed3-9743-6d543c5a45c2",
+		"name": "Desafio-12",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14743465"
+	},
+	"item": [
+		{
+			"name": "Obtener Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7770/info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7770",
+					"path": [
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Randoms",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7770/api/random",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7770",
+					"path": [
+						"api",
+						"random"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
