@@ -1,99 +1,46 @@
-# SERVIDOR CON BALANCE DE CARGA
+# LOGGERS, GZIP y ANÁLISIS DE PERFORMANCE
 
-Retomemos nuestro trabajo para poder ejecutar el servidor en modo fork o cluster,
-ajustando el balance de carga a través de Nginx.
-
-
->> Consigna:
-Tomando con base el proyecto que vamos realizando, agregar un parámetro más en
-la ruta de comando que permita ejecutar al servidor en modo fork o cluster. Dicho
-parámetro será 'FORK' en el primer caso y 'CLUSTER' en el segundo, y de no
-pasarlo, el servidor iniciará en modo fork.
-● Agregar en la vista info, el número de procesadores presentes en el servidor.
-● Ejecutar el servidor (modos FORK y CLUSTER) con nodemon verificando el número de
-procesos tomados por node.
-● Ejecutar el servidor (con los parámetros adecuados) utilizando Forever, verificando su
-correcta operación. Listar los procesos por Forever y por sistema operativo.
-● Ejecutar el servidor (con los parámetros adecuados: modo FORK) utilizando PM2 en sus
-modos modo fork y cluster. Listar los procesos por PM2 y por sistema operativo.
-● Tanto en Forever como en PM2 permitir el modo escucha, para que la actualización del
-código del servidor se vea reflejado inmediatamente en todos los procesos.
-● Hacer pruebas de finalización de procesos fork y cluster en los casos que corresponda.
+Retomemos nuestro trabajo para implementar compresión por Gzip, registros por
+loggueo, y analizar la performance de nuestro servidor.
 
 
 >> Consigna:
-Configurar Nginx para balancear cargas de nuestro servidor de la siguiente manera:
-Redirigir todas las consultas a /api/randoms a un cluster de servidores escuchando en el puerto 8081. El cluster será creado desde node utilizando el módulo nativo cluster.
-El resto de las consultas, redirigirlas a un servidor individual escuchando en el puerto 8080.
-Verificar que todo funcione correctamente.
-Luego, modificar la configuración para que todas las consultas a /api/randoms sean redirigidas a
-un cluster de servidores gestionado desde nginx, repartiéndolas equitativamente entre 4
-instancias escuchando en los puertos 8082, 8083, 8084 y 8085 respectivamente.
+Incorporar al proyecto de servidor de trabajo la compresión gzip.
+Verificar sobre la ruta /info con y sin compresión, la diferencia de cantidad de bytes devueltos en un
+caso y otro.
+Luego implementar loggueo (con alguna librería vista en clase) que registre lo siguiente:
+● Ruta y método de todas las peticiones recibidas por el servidor (info)
+● Ruta y método de las peticiones a rutas inexistentes en el servidor (warning)
+● Errores lanzados por las apis de mensajes y productos, únicamente (error)
+Considerar el siguiente criterio:
+● Loggear todos los niveles a consola (info, warning y error)
+● Registrar sólo los logs de warning a un archivo llamada warn.log
+● Enviar sólo los logs de error a un archivo llamada error.log
 
 
->> Aspectos a incluir en el entregable:
-Incluir el archivo de configuración de nginx junto con el proyecto.
-Incluir también un pequeño documento en donde se detallen los comandos que deben
-ejecutarse por línea de comandos y los argumentos que deben enviarse para levantar todas las
-instancias de servidores de modo que soporten la configuración detallada en los puntos
-anteriores.
-Ejemplo:
-● pm2 start ./miservidor.js -- --port=8080 --modo=fork
-● pm2 start ./miservidor.js -- --port=8081 --modo=cluster
-● pm2 start ./miservidor.js -- --port=8082 --modo=fork
-● ...
+>> Consigna:
+Luego, realizar el análisis completo de performance del servidor con el que venimos
+trabajando.
+Vamos a trabajar sobre la ruta '/info', en modo fork, agregando ó extrayendo un console.log de la
+información colectada antes de devolverla al cliente. Además desactivaremos el child_process de la ruta
+'/randoms'
+Para ambas condiciones (con o sin console.log) en la ruta '/info' OBTENER:
+1) El perfilamiento del servidor, realizando el test con --prof de node.js. Analizar los resultados obtenidos
+luego de procesarlos con --prof-process.
+Utilizaremos como test de carga Artillery en línea de comandos, emulando 50 conexiones concurrentes con
+20 request por cada una. Extraer un reporte con los resultados en archivo de texto.
 
 
 
-## Configuraciones
-
-- Dentro del archivo "package.json" estan los scripts, en donde puedes modificar el parametro "-p" el cual maneja el puerto de escucha, modificar con el puerto que desea escuchar y usar npm start
-
-- Ejecutar nginx con su respectiva configuracion de proxy, *Se dejó los archivos de configuracion en "/nginx/conf/nginx - consigna x.conf"*
-
-
-## Consigna Proxy NODEMON
-
-```
-FORK= nodemon server.js -p 8081 -m fork
-CLUSTER= nodemon server.js -p 8082 -m cluster
-```
-
-## Consigna FOREVER
-
-```
-FORK= forever -w start server.js -p 8081 -m fork
-CLUSTER= forever -w start server.js -p 8082 -m cluster
-
-LISTAR= forever list
-```
-
-## Consigna PM2
-
-```
-FORK= pm2 start ./server.js --name="i01" --watch -- -p 8081
-CLUSTER=  pm2 start ./server.js --name="i02" --watch -i max -- -p 8082
-
-LISTAR= pm2 monit
-```
-
-## Consigna Proxy N°1
-
-```
-pm2 start ./server.js --name="i01" -- -p 8081 -m cluster
-pm2 start ./server.js --name="i02" -- -p 8080
-```
-
-## Consigna Proxy N°2
-
-```
-pm2 start ./server.js --name="i01"  -- -p 8080
-pm2 start ./server.js --name="i02"  -- -p 8082
-pm2 start ./server.js --name="i03"  -- -p 8083
-pm2 start ./server.js --name="i04"  -- -p 8084
-pm2 start ./server.js --name="i05"  -- -p 8085
-```
-
-
+>>Consigna
+Luego utilizaremos Autocannon en línea de comandos, emulando 100 conexiones concurrentes realizadas
+en un tiempo de 20 segundos. Extraer un reporte con los resultados (puede ser un print screen de la
+consola)
+2) El perfilamiento del servidor con el modo inspector de node.js --inspect. Revisar el tiempo de los procesos
+menos performantes sobre el archivo fuente de inspección.
+3) El diagrama de flama con 0x, emulando la carga con Autocannon con los mismos parámetros anteriores.
+Realizar un informe en formato pdf sobre las pruebas realizadas incluyendo los resultados de todos los test
+(texto e imágenes).
+👉 Al final incluir la conclusión obtenida a partir del análisis de los datos.
 
 
