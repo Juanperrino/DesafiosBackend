@@ -1,0 +1,146 @@
+h1,
+h2 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.cards-products {
+    margin-top: 30px;
+    /*  display: flex;
+      flex-direction: row;
+      flex-wrap: wrap; */
+    /*  align-items: center; */
+    /* justify-content: center; */
+}
+
+.porduct {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    /*height: 480px; */
+    /*      background-color: aliceblue; */
+    /*   border: 1px solid black;
+      border-radius: 20px 20px 20px 20px; */
+    /*   border: 0px solid #000000; */
+    box-shadow: 10px 11px 26px -3px rgba(0, 0, 0, 0.86);
+    text-align: center;
+    margin: 10px;
+}
+
+.product__title {
+    border: 1px solid black;
+    width: 95%;
+    border-radius: 41px 11px 41px 11px;
+    margin-bottom: 5px;
+}
+
+.product__descript {
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.product__img img {
+    padding-top: 5px;
+    width: 100px;
+    height: auto;
+}
+
+.product__price {
+    background-color: gray;
+    width: 95%;
+    color: aliceblue;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.product__stock {
+    background-color: gray;
+    width: 95%;
+    color: aliceblue;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.btnCarritos {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+}
+
+.btnCarritos input,
+.btnCarritos select,
+.btnCarritos button {
+    width: 300px;
+    text-align: center;
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 10px 11px 26px -3px rgba(0, 0, 0, 0.86);
+}
+
+.formIngreso {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.formIngreso__items input {
+    width: 300px;
+    text-align: center;
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 10px 11px 26px -3px rgba(0, 0, 0, 0.86);
+}
+
+.btnEnviar {
+    cursor: pointer;
+}
+
+.borrar,
+.editar,
+.agregar {
+    text-align: center;
+    margin: 10px;
+    padding: 5px 20px 5px 20px;
+    border: 1px solid black;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 10px 11px 26px -3px rgba(0, 0, 0, 0.86);
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.lista {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.lista ul {
+    list-style: none;
+}
+
+.lista img {
+    margin-left: 15px;
+    width: 30px;
+    height: auto;
+}

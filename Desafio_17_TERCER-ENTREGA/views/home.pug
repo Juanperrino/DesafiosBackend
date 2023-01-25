@@ -1,0 +1,7 @@
+include includes/navbar.pug
+body.bg-success
+h1.text-light Productos
+input#userId(type='hidden' value=user)
+#cardsProducts.cards-products.row.row-cols-1.row-cols-md-3.g-4.container
+script(src='./javascript/productos.js' type='module')
+include includes/footer.pug

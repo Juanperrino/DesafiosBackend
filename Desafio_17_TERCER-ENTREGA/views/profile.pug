@@ -1,0 +1,20 @@
+include includes/navbar.pug
+body.bg-success
+
+h1.text-light Perfil
+.container.mt-5.text-center
+  .card(style='width: 18rem; margin: 0 auto')
+    img.card-img-top(src= avatar alt=nombre)
+    .card-body
+      h5.card-title
+        | #{nombre}
+      p.card-text
+        | #{user}
+    ul.list-group.list-group-flush
+      li.list-group-item
+        | Dirrecion: #{direccion}
+      li.list-group-item
+        | Telefono: #{telefono}
+      li.list-group-item
+        | Edad: #{edad}
+include includes/footer.pug

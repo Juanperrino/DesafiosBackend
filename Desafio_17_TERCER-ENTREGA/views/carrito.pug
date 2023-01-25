@@ -1,0 +1,11 @@
+include includes/navbar.pug
+body.bg-success
+h1.text-light Carrito
+.row.container
+  #cardsProducts.cards-products.row.row-cols-1.row-cols-md-3.g-4.container
+  .row.row-cols-1.row-cols-md-3.g-4.container
+    input.btn.btn-outline-light.btnFinalizar(type='button' value='Finalizar Compra')
+
+a.btn.btn-warning.mt-5(href='/') Volver
+script(src='./javascript/carrito.js' type='module')
+include includes/footer.pug

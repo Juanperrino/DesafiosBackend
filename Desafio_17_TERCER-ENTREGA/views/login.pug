@@ -1,0 +1,20 @@
+include includes/links-cdn-css-head.pug
+body.bg-success
+  title Bienvenidos
+  main
+    a.d-flex.justify-content-center.btn.btn-warning(href='/registro') Registrate
+    .container.mt-3.text-center
+      div
+        h1.text-light Formulario de login
+        br
+      
+        form.row.g-3.flex-column.was-validated.justify-content-center.align-items-center.mt-5(action='/api/sign-in' method='post')
+          .col-md-4
+            input#nombre.form-control(type='email' name='email' placeholder='Ingrese el email' required='')
+          .col-md-4
+            input#password.form-control(type='password' name='password' placeholder='Ingrese su Contraseña' required='')
+          .row.justify-content-md-center.mt-4
+            .col-1
+              button.btn.btn-warning Login
+       
+include includes/links-cdn-js-footer.pug

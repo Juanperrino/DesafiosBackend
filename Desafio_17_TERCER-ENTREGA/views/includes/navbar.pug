@@ -1,0 +1,16 @@
+include links-cdn-css-head.pug
+title Vinoteca
+nav.navbar.navbar-expand-lg.navbar-dark.bg-warning
+  .container-fluid
+    a.navbar-brand.text-dark(href='/') Productos
+    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.ms-auto.navbar-nav.mb-2.mb-lg-0
+        li.nav-item
+          a.nav-link.text-dark(href='/profile') Perfil
+   
+        a.nav-link.text-dark(href='/carrito' tabindex='-1' aria-disabled='true') Carrito
+      form.d-flex(action='/logout' method='POST')
+        button.btn.btn-outline-light Logout
+        input(type='hidden' name='username' value='pepe')

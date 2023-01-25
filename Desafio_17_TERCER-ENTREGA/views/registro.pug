@@ -1,0 +1,30 @@
+include includes/links-cdn-css-head.pug
+  title Bienvenidos
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js')
+body.bg-success
+main
+  a.d-flex.justify-content-center.btn.btn-warning(href='/') Login
+  .container.mt-3.text-center
+    div
+      h1.text-light Formulario de registro
+      br
+      form.row.g-3.flex-column.was-validated.justify-content-center.align-items-center.mt-5(action='/api/sign-up' method='post' enctype='multipart/form-data')
+        .col-md-4
+          input#nombre.form-control(type='email' name='email' placeholder='Ingrese el email' required='')
+        .col-md-4
+          input#password.form-control(type='password' name='password' placeholder='Ingrese su Contraseña' required='')
+        .col-md-4
+          input#nombre.form-control(type='text' name='nombre' placeholder='Ingrese su Nombre' required='')
+        .col-md-4
+          input#direccion.form-control(type='text' name='direccion' placeholder='Ingrese su Dirrecion' required='')
+        .col-md-4
+          input#edad.form-control(type='number' name='edad' placeholder='Ingrese su Edad' required='')
+        .col-md-4
+          input#telefono.form-control(type='number' name='telefono' placeholder='Ingrese su Telefono con el codigo de pais' required='')
+        .col-md-4
+          input#filename.form-control(type='file' name='filename' placeholder='Ingrese su Avatar' required='')
+        .row.justify-content-md-center.mt-4
+          .col-1
+            button.btn.btn-warning Registrar
+include includes/links-cdn-js-footer.pug

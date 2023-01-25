@@ -1,0 +1,9 @@
+include includes/links-cdn-css-head.pug
+body.bg-success
+.d-flex.justify-content-evenly.mt-5.mb-5.bg-warning.align-items-center
+  h2
+    | Hasta luego #{user}
+script.
+  setTimeout(() => { location.href = '/' }, 2000)
+
+include includes/links-cdn-js-footer.pug
