@@ -1,0 +1,5 @@
+{"level":"info","message":{"duration":720,"state":"passed","title":"Deberia obtener todos los productos"},"timestamp":"2023-02-15 19:06:34"}
+{"level":"info","message":{"duration":115,"state":"passed","title":"Deberia Crear un producto"},"timestamp":"2023-02-15 19:06:34"}
+{"level":"info","message":{"duration":57,"state":"passed","title":"Deberia obtener por id un  producto"},"timestamp":"2023-02-15 19:06:34"}
+{"level":"info","message":{"duration":154,"state":"passed","title":"Deberia Editar un producto"},"timestamp":"2023-02-15 19:06:34"}
+{"level":"info","message":{"duration":187,"state":"passed","title":"Deberia Eliminar un producto"},"timestamp":"2023-02-15 19:06:34"}
