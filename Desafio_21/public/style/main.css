@@ -1,0 +1,94 @@
+img {
+      width: 25px;
+      height: auto;
+}
+
+.messageContainer {
+      background-color: beige;
+      height: 300px;
+      width: 700px;
+      overflow-y: scroll;
+}
+
+.email {
+      font-weight: bold;
+      color: blue;
+}
+
+.date {
+      color: brown;
+}
+
+.message {
+      font-style: italic;
+      color: green;
+}
+
+.error {
+      color: red;
+      border-color: red;
+}
+
+.error:focus {
+      border-color: red;
+}
+
+.hidden {
+      display: none;
+}
+
+.borrar {
+      margin-left: 40px;
+      cursor: pointer;
+}
+
+.editar {
+      cursor: pointer;
+}
+
+.loaderContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.loader {
+      width: 48px;
+      height: 48px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      display: inline-block;
+      position: relative;
+      box-sizing: border-box;
+      animation: rotation 1s linear infinite;
+}
+
+.loader::after,
+.loader::before {
+      content: '';
+      box-sizing: border-box;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: #ff3d00;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+}
+
+.loader::before {
+      left: auto;
+      top: auto;
+      right: 0;
+      bottom: 0;
+}
+
+@keyframes rotation {
+      0% {
+            transform: rotate(0deg);
+      }
+
+      100% {
+            transform: rotate(360deg);
+      }
+}
